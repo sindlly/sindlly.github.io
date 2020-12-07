@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>
         
-            我想学的东西
+            docker
         
     </title>
     <link rel="icon" href="/img/favicon.png"/>
@@ -100,14 +100,14 @@
     <main class="main">
         <article class="post">
             <h1>
-                <a class="title" href="/2020/08/25/list/"> 
-                    我想学的东西 
+                <a class="title" href="/2020/08/26/docker/"> 
+                    docker 
                 </a>
             </h1>
             <div class="meta">
                 <a class="date"> 
                     <i class="fa fa-calendar" aria-hidden="true"></i>                    
-                    2020-08-25   
+                    2020-08-26   
                 </a>
                 
                 <a class="category">
@@ -119,26 +119,17 @@
                     
             </div>
 <div class="toc">
-  
+  <ol class="toc-list"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#docker-%E4%BB%8B%E7%BB%8D"><span class="toc-list-text">docker 介绍</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#docker-%E6%93%8D%E4%BD%9C"><span class="toc-list-text">docker 操作</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#docker%E9%83%A8%E7%BD%B2"><span class="toc-list-text">docker部署</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#CI"><span class="toc-list-text">CI</span></a></li></ol>
 </div>
             <div class="content">
-                <ul>
-<li>docker(8月)<ul>
-<li>如何构建</li>
-<li>如何使用</li>
-</ul>
-</li>
-<li>node（9月）<ul>
-<li>node爬虫</li>
-<li>各种数据库的连接</li>
-<li>接口的写法</li>
-</ul>
-</li>
-<li>设计模式（10月）</li>
-<li>serverless（11月）</li>
-<li>区块链（12月）</li>
-</ul>
+                <h2 id="docker-介绍"><a href="#docker-介绍" class="headerlink" title="docker 介绍"></a>docker 介绍</h2><h2 id="docker-操作"><a href="#docker-操作" class="headerlink" title="docker 操作"></a>docker 操作</h2><p>1、在项目中创建Dockerfile文件<br>2、使用docker build 创建镜像  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t yourDockerName &lt;项目路径&gt;</span><br></pre></td></tr></table></figure>
+<p>3、运行docker</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 3000:80 yourDockerName</span><br></pre></td></tr></table></figure>
+<p>加-d 表示后台运行<br>4、其他命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker image ls &#x2F;&#x2F;列出本地镜像</span><br></pre></td></tr></table></figure>
 
+<h2 id="docker部署"><a href="#docker部署" class="headerlink" title="docker部署"></a>docker部署</h2><h2 id="CI"><a href="#CI" class="headerlink" title="CI"></a>CI</h2>
             </div>
           
            
@@ -149,7 +140,7 @@
                 </div>
                 <div class="link">
                     <a>Link:</a>
-                    <a class="permalink" href="http://yoursite.com/2020/08/25/list/">http://yoursite.com/2020/08/25/list/</a>
+                    <a class="permalink" href="http://yoursite.com/2020/08/26/docker/">http://yoursite.com/2020/08/26/docker/</a>
                 </div>
                 <div class="license">
                     <a>Statement:</a>
@@ -186,12 +177,12 @@
 
 <div class="more">
 
-    <div class="prev">
-   <a href="/2020/08/26/docker/">  docker</a>
-    </div>
-
 <div></div>
 
+    <div class="next">
+    <a href="/2020/08/25/list/"> 我想学的东西 </a>
+    </div>
+    
 </div>
 
 <div class="bdsharebuttonbox">
@@ -214,7 +205,7 @@ window._bd_share_config={
 
 <script>
     var gitment = new Gitment({
-    id: "Tue Aug 25 2020 14:14:40 GMT+0800",
+    id: "Wed Aug 26 2020 16:25:41 GMT+0800",
     owner: "sindlly",
     repo: "sindlly.github.io",
     oauth: {
