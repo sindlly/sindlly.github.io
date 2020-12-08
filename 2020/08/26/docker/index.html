@@ -1,128 +1,98 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <title>
-        
-            docker
-        
-    </title>
-    <link rel="icon" href="/img/favicon.png"/>
-    
+  <meta charset="utf-8">
+  
+
+  
+  <title>docker | sindlly博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="docker 介绍docker 操作1、在项目中创建Dockerfile文件2、使用docker build 创建镜像   1docker build -t yourDockerName &lt;项目路径&gt; 3、运行docker 1docker run -p 3000:80 yourDockerName 加-d 表示后台运行4、其他命令 1docker image ls &#x2F;&amp;#x2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker">
+<meta property="og:url" content="http://yoursite.com/2020/08/26/docker/index.html">
+<meta property="og:site_name" content="sindlly博客">
+<meta property="og:description" content="docker 介绍docker 操作1、在项目中创建Dockerfile文件2、使用docker build 创建镜像   1docker build -t yourDockerName &lt;项目路径&gt; 3、运行docker 1docker run -p 3000:80 yourDockerName 加-d 表示后台运行4、其他命令 1docker image ls &#x2F;&amp;#x2">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-08-26T08:25:41.019Z">
+<meta property="article:modified_time" content="2020-08-26T08:39:23.792Z">
+<meta property="article:author" content="snidely">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="sindlly博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
 <link rel="stylesheet" href="/css/style.css">
 
-    
-<link rel="stylesheet" href="/css/font-awesome.min.css">
-
-    
-<link rel="stylesheet" href="/css/gitment.css">
-
-    
-<link rel="stylesheet" href="/css/hljs.min.css">
-
-    
-<script src="/js/hljs.min.js"></script>
-  
-    
-<script src="/js/gitment.browser.js"></script>
-  
 <meta name="generator" content="Hexo 5.0.2"></head>
+
 <body>
-    <header class="header" id="header">
-    <h1>
-        <a class="title" href="/">
-            Hexo
-        </a>
-    </h1>
-    <h2>
-        <a class="motto">
-            dxy loves zy
-        </a>
-    </h2>
-    <nav class="navbar">
-        <ul class="menu">
-            
-            
-                <li class="menu-item">
-                    <a href="/" class="menu-item-link">
-                        Home
-                    </a>
-                </li>
-            
-                
-            
-                <li class="menu-item">
-                    <a href="/archives/" class="menu-item-link">
-                        Archives
-                    </a>
-                </li>
-            
-                
-            
-                <li class="menu-item">
-                    <a href="/about/" class="menu-item-link">
-                        About
-                    </a>
-                </li>
-            
-                
-            
-                <li class="menu-item">
-                    <a target="_blank" rel="noopener" href="https://github.com/sindlly/" class="menu-item-link">
-                        Github
-                    </a>
-                </li>
-            
-                
-            
-                <li class="menu-item">
-                    <a href="/atom.xml" class="menu-item-link">
-                        RSS
-                    </a>
-                </li>
-            
-                
-            
-                
-                
-                <li class="menu-item">
-                    <a class="menu-item-link search">
-                        Search                   
-                        <i class="fa fa-long-arrow-right search-icon" aria-hidden="true"></i>
-                    </a>
-                        <input placeholder="Search..." class="search-input" style="display:none;border:none!important;" onkeydown="onEnter(event)" onkeypress="onEnter(event)"></input>
-                </li>
-                
-        </ul>
-    </nav>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">sindlly博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
 </header>
-    <main class="main">
-        <article class="post">
-            <h1>
-                <a class="title" href="/2020/08/26/docker/"> 
-                    docker 
-                </a>
-            </h1>
-            <div class="meta">
-                <a class="date"> 
-                    <i class="fa fa-calendar" aria-hidden="true"></i>                    
-                    2020-08-26   
-                </a>
-                
-                <a class="category">
-                    <i class="fa fa-th" aria-hidden="true"></i>  
-                </a>
-               
-                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li></ul>
-                
-                    
-            </div>
-<div class="toc">
-  <ol class="toc-list"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#docker-%E4%BB%8B%E7%BB%8D"><span class="toc-list-text">docker 介绍</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#docker-%E6%93%8D%E4%BD%9C"><span class="toc-list-text">docker 操作</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#docker%E9%83%A8%E7%BD%B2"><span class="toc-list-text">docker部署</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#CI"><span class="toc-list-text">CI</span></a></li></ol>
-</div>
-            <div class="content">
-                <h2 id="docker-介绍"><a href="#docker-介绍" class="headerlink" title="docker 介绍"></a>docker 介绍</h2><h2 id="docker-操作"><a href="#docker-操作" class="headerlink" title="docker 操作"></a>docker 操作</h2><p>1、在项目中创建Dockerfile文件<br>2、使用docker build 创建镜像  </p>
+      <div class="outer">
+        <section id="main"><article id="post-docker" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/26/docker/" class="article-date">
+  <time datetime="2020-08-26T08:25:41.019Z" itemprop="datePublished">2020-08-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      docker
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="docker-介绍"><a href="#docker-介绍" class="headerlink" title="docker 介绍"></a>docker 介绍</h2><h2 id="docker-操作"><a href="#docker-操作" class="headerlink" title="docker 操作"></a>docker 操作</h2><p>1、在项目中创建Dockerfile文件<br>2、使用docker build 创建镜像  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t yourDockerName &lt;项目路径&gt;</span><br></pre></td></tr></table></figure>
 <p>3、运行docker</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 3000:80 yourDockerName</span><br></pre></td></tr></table></figure>
@@ -130,110 +100,120 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker image ls &#x2F;&#x2F;列出本地镜像</span><br></pre></td></tr></table></figure>
 
 <h2 id="docker部署"><a href="#docker部署" class="headerlink" title="docker部署"></a>docker部署</h2><h2 id="CI"><a href="#CI" class="headerlink" title="CI"></a>CI</h2>
-            </div>
-          
-           
-            <div class="copyright">
-                <div class="name">
-                    <a>Author:</a>
-                    <a>sindlly</a>
-                </div>
-                <div class="link">
-                    <a>Link:</a>
-                    <a class="permalink" href="http://yoursite.com/2020/08/26/docker/">http://yoursite.com/2020/08/26/docker/</a>
-                </div>
-                <div class="license">
-                    <a>Statement:</a>
-                    <a>All articles in this blog shall be licensed by CC BY-NC-SA 3.0 CN, unless otherwise stated. Please indicate the provenance!</a>
-                </div>
-            </div>
-            
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/08/26/docker/" data-id="ckifdz2mm00004yo4dva298w2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/12/08/plan/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          plan
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
-          
-
-
+  
 </article>
 
-
-<div class="tip">
-<button class="tip-btn">
-    Tip
-</button>
-<div class="tip-img">
-<ul>
-    
-<li>
-    <img src="/img/qrcode.jpeg"></img>
-</li>
-
- 
-<li>
-    <img src="/img/qrcode.jpeg"></img>
-</li>
-
-</ul>
-</div>
-</div>
-
-<div class="more">
-
-<div></div>
-
-    <div class="next">
-    <a href="/2020/08/25/list/"> 我想学的东西 </a>
-    </div>
-    
-</div>
-
-<div class="bdsharebuttonbox">
-<a href="#" class="bds_weixin fa fa-weixin" data-cmd="weixin" title="分享到微信" style="color:#1cbd8f">
-</a>
-<a href="#" class="bds_tsina fa fa-weibo" data-cmd="tsina" title="分享到新浪微博" style="color:#ff6363">
-</a>
-<a href="#" class="bds_twi fa fa-twitter" data-cmd="twi" title="分享到Twitter" style="color:#00A7EB">
-</a>
-<a href="#" class="bds_fbook fa fa-facebook" data-cmd="fbook" title="分享到Facebook" style="color:#00A7EB">
-</a>
-</div>
-<script>
-window._bd_share_config={
-    "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},
-    "share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='../../../../../static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
- 
-<div id="comments"></div>
-
-<script>
-    var gitment = new Gitment({
-    id: "Wed Aug 26 2020 16:25:41 GMT+0800",
-    owner: "sindlly",
-    repo: "sindlly.github.io",
-    oauth: {
-      client_id:"8d83609a651e972e308d",
-      client_secret: "37e40c89a47e957f654e86f71c5caaccad0774de",
-    }
-  })
-  gitment.render('comments')
-</script>
-    </main>
-    <a class="not-found">not found!</a>
-    <div class="search-items">
-    </div>
-    <a href="#header" id="top" style="display:none">
-        <i class="fa fa-sort-asc fa-2x"></i>
-    </a>
-    <footer class="footer">
-    <div class="footer-copyright">©️2017
-    <a href="//github.com/Vevlins/toki" class="link" target="_blank">Toki</a>  by Vevlins
-    </div>
-</footer>
-
-    
-<script src="/js/jquery.js"></script>
-
-    
-<script src="/js/toki.js"></script>
+</section>
+        
+          <aside id="sidebar">
   
-  <script>hljs.initHighlightingOnLoad();</script>
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A02/">学习2</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/08/plan/">plan</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/26/docker/">docker</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 snidely<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
 </body>
 </html>
